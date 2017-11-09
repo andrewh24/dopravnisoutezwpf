@@ -20,9 +20,20 @@ namespace DopravniSoutez
     /// </summary>
     public partial class UserControlTabsGrid : UserControl
     {
+        NorthwindDataSet ds;
         public UserControlTabsGrid()
         {
             InitializeComponent();
+
+            ds = new NorthwindDataSet();
+            NorthwindDataSetTableAdapters.CustomersTableAdapter customerAdapter =
+                    new NorthwindDataSetTableAdapters.CustomersTableAdapter();
+
+            //Populate adapter
+            customerAdapter.Fill(ds.Customers);
+
+            //Bind adapter to datagrid
+            dataGrid1.ItemsSource = ds.Customers.DefaultView;
         }
     }
 }

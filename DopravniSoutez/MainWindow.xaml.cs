@@ -1,18 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace DopravniSoutez
 {
@@ -21,33 +8,16 @@ namespace DopravniSoutez
     /// </summary>
     public partial class MainWindow : Window
     {
-        //NorthwindDataSet ds;
-
-        // Private var
+        
+        //Private var
 
         public MainWindow()
         {
+
             InitializeComponent();
             this.contentControl.Content = new UserControlTabsGrid();
 
-            //Create new DataSeta
-            //ds = new NorthwindDataSet();
-
-            ////Create table adapter for Customers
-            //NorthwindDataSetTableAdapters.CustomersTableAdapter customerAdapter =
-            //        new NorthwindDataSetTableAdapters.CustomersTableAdapter();
-
-            ////Populate adapter
-            //customerAdapter.Fill(ds.Customers);
-
-            ////Bind adapter to datagrid
-            //dataGrid1.ItemsSource = ds.Customers.DefaultView;
         }
-
-        //private void TreeViewItem_MouseDoubleClick_Mapa(object sender, MouseButtonEventArgs e)
-        //{
-        //    this.contentControl.Content = new UserControlGrid();
-        //}
 
         private void treeView_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
         {
