@@ -12,23 +12,29 @@
             <ColumnDefinition MinWidth="150" />
             <ColumnDefinition Width="5" />
             <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="4" />
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
             <RowDefinition Height="1*" MinHeight="50" />
             <RowDefinition Height="5" />
-            <RowDefinition Height="15*" />
+            <RowDefinition Height="10*" />
+            <RowDefinition MinHeight="50" />
         </Grid.RowDefinitions>
         
         <ToolBar x:Name="toolBar" Grid.ColumnSpan="3" />
         <GridSplitter Grid.Row="1" Grid.ColumnSpan="3" Height="5" HorizontalAlignment="Stretch" />
-        <TreeView x:Name="treeView" Grid.Row="1" Grid.RowSpan="2" TreeView.SelectedItemChanged="treeView_SelectedItemChanged">
-            <TreeViewItem Header="Testy + PSP" />
-            <TreeViewItem Header="Zručnost" />
-            <TreeViewItem x:Name="Mapa" Header="Mapa" />
-            <TreeViewItem Header="První pomoc" />
+        <TreeView x:Name="treeView" Grid.Row="1" Grid.RowSpan="3" TreeView.SelectedItemChanged="treeView_SelectedItemChanged" Margin="0" FontSize="16">
+            <TreeViewItem Header="Testy + PSP" Margin="0,20,0,0" />
+            <TreeViewItem Header="Zručnost" Margin="0,20,0,0" />
+            <TreeViewItem x:Name="Mapa" Header="Mapa" Margin="0,20,0,0" />
+            <TreeViewItem Header="První pomoc" Margin="0,20,0,0" />
         </TreeView>
-        <GridSplitter Grid.RowSpan="2" Grid.Row="1" Grid.Column="1" Width="5" HorizontalAlignment="Stretch" />
+        <GridSplitter Grid.RowSpan="3" Grid.Row="1" Grid.Column="1" Width="5" HorizontalAlignment="Stretch" />
         <ContentControl x:Name="contentControl" Grid.Row="2" Grid.Column="2" />
+        <DockPanel x:Name="stackPanel" Grid.Row="3" Grid.Column="2">
+            <Button Height="30" Width="80" Content="Nový" Margin="20,0,0,0" />
+            <Button Height="30" Width="80" Content="Vymazat" HorizontalAlignment="Right" Margin="0,0,20,0" />
+        </DockPanel>
     </Grid>
 </Window>

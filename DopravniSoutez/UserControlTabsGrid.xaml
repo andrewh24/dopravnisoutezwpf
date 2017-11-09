@@ -8,10 +8,10 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
         <TabControl>
-            <TabItem Header="Mladší">
-                <DataGrid x:Name="dataGrid1" />
+            <TabItem Header="Mladší" Width="80">
+            <DataGrid x:Name="dataGrid1" />
             </TabItem>
-            <TabItem Header="Starší">
+            <TabItem Header="Starší" Width="80">
                 <DataGrid x:Name="dataGrid2" />
             </TabItem>
         </TabControl>
